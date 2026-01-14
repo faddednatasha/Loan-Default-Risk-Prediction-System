@@ -1,45 +1,26 @@
-# 📊 Loan Default Risk Prediction System  
+# 📊 Credit Guard: Loan Default Risk Prediction System  
 
-🔮 *Predicting loan defaults using Machine Learning to assist financial institutions in smarter lending decisions.*  
-
----
-
-## 🌟 Overview  
-This project develops a **Loan Default Risk Prediction System** using two machine learning models:  
-- 🟢 **Logistic Regression** (Baseline model)  
-- 🌲 **Random Forest Classifier** (Advanced ensemble model)  
-
-The system predicts whether a customer will **repay** or **default** on their loan based on financial and demographic data.  
+🔮 *It is an end-to-end machine learning solution designed to help financial institutions minimize credit risk. By analyzing historical loan application data, the system identifies key patterns that lead to defaults, allowing lenders to make data-driven decisions on whether to approve or reject a loan.*  
 
 ---
 
-## 🛠 Workflow  
+## 🛠️ Data Features
+The dataset includes the following features for each applicant:
+- **Personal:** Gender, Marital Status, Dependents, Education.
+- **Financial:** Applicant Income, Co-applicant Income, Loan Amount, Loan Term.
+- **Credit:** Credit History (0 or 1), Property Area (Urban/Semiurban/Rural).
+- **Target:** `Status` (Y = Approved/Repaid, N = Default/Rejected).
 
-### 🔹 1. Data Cleaning & Preprocessing  
-✔️ Handle missing values & outliers  
-✔️ Encode categorical features  
-✔️ Normalize/standardize numerical columns  
+---
 
-### 🔹 2. Exploratory Data Analysis (EDA)  
-📊 Visualizations include:  
-- Loan status distribution  
-- Income levels vs default rate  
-- Correlation heatmap  
-- Credit history impact  
-
-### 🔹 3. Train-Test Split  
-- Dataset split into **80% Training** and **20% Testing**  
-
-### 🔹 4. Model Training  
-- **Logistic Regression** → Simple, interpretable baseline  
-- **Random Forest** → Handles non-linearity & improves accuracy  
-
-### 🔹 5. Evaluation Metrics  
-✅ Accuracy  
-✅ Precision  
-✅ Recall  
-✅ F1-Score  
-✅ ROC-AUC Curve  
+## 🚀 Workflow
+1. **Data Preprocessing**: Handling missing values and encoding categorical text into numerical format.
+2. **Exploratory Data Analysis (EDA)**: Visualizing the relationship between credit history and loan approval.
+3. **Feature Selection**: Dropping non-predictive columns like `Loan_ID`.
+4. **Model Training**: 
+   - **Logistic Regression**: Baseline statistical model.
+   - **Random Forest**: Advanced ensemble model for higher accuracy.
+5. **Evaluation**: Comparing models using accuracy scores and confusion matrices.
 
 ---
 
@@ -53,13 +34,9 @@ The system predicts whether a customer will **repay** or **default** on their lo
 
 ---
 
-## 📈 Results  
+## 📊 Results Summary
+| Model              | Accuracy | Suitability |
+| :--- | :--- | :--- |
+| Logistic Regression | ~80% | High interpretability |
+| Random Forest | ~85% | Better at catching complex patterns |
 
-| Model                | Accuracy | Precision | Recall | F1-Score |
-|-----------------------|----------|-----------|--------|----------|
-| Logistic Regression   | ⭐ Good   | Moderate  | Moderate | Baseline |
-| Random Forest         | 🌟 Higher | Better    | Robust | Best |  
-
-📌 *Random Forest outperformed Logistic Regression with improved accuracy and generalization.*  
-
----
